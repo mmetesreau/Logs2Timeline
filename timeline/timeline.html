@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+		<style type="text/css">
+			* {
+			    margin: 0;
+			    padding: 0;
+			}
+
+			body {
+			    font-size: 12px;
+			    background: #eee;
+			    padding: 0 1rem 1rem 1rem;
+			    font-family: 'Muli', 'sans serif';
+			}
+
+			a {
+			    color: #ff6e00;
+			    text-decoration: none;
+			}
+
+			a:hover {
+			    text-decoration: underline;
+			}
+
+			h1 {
+			    text-align: center;
+			    margin: 1.5rem auto 1rem;
+			    font-family: 'Josefin Sans', Serif;
+			    font-weight: normal;
+			    font-size: 3rem;
+			    color: #aaa;
+			}
+
+			.drop {
+			    cursor: pointer;
+			}
+
+			.tooltip {
+			    font-size: 16px;
+			    position: absolute;
+			    background: #fff;
+			    border: 3px solid #e7e7e7;
+			    border-radius: 1rem;
+			    padding: .5rem 1rem;
+			    width: 50rem;
+			    line-height: 1.4rem;
+			}
+
+			.tooltip::before {
+			    content: '';
+			    display: block;
+			    position: absolute;
+			    top: -.65rem;
+			    width: 1rem;
+			    height: 1rem;
+			    background: #fff;
+			    border: 3px solid #e7e7e7;
+			    border-width: 3px 0 0 3px;
+			    transform: rotate(45deg);
+			    z-index: 1;
+			}
+
+			.tooltip.left::before {
+			    left: 1.65rem;
+			}
+
+			.tooltip.right::before {
+			    right: 1.65rem;
+			}
+
+			.tooltip .placeholder {
+			    position: relative;
+			    z-index: 2;
+			    display: flex;
+			    flex-direction: row;
+			    align-items: center;
+			}
+
+			.tooltip .content {
+			    flex: 1 0 0;
+			}
+
+			.tooltip h3 {
+			    font-size: 1rem;
+			}
+
+			.tooltip p {
+			    font-size: .9rem;
+			    color: #777;
+			}
+
+			footer p {
+			    text-align: center;
+			    color: #888;
+			    font-size: .8rem;
+			}
+
+			.zoom-area {
+			    fill: transparent;
+			    cursor: pointer;
+			}
+
+			.y-tick {
+			    stroke: black;
+			    fill: none;
+			    stroke-width: 1px;
+			}
+
+			.line-separator, .x-axis {
+			    stroke: black;
+			    fill: none;
+			    stroke-width: 1px;
+			}
+
+			.line-separator:last-child {
+			    display: none;
+			}
+
+			.x-axis {
+			    position: absolute;
+			    z-index: 50;
+			}
+
+			text {
+			    stroke: none;
+			    fill: black;
+			}
+
+			.graph-body .line {
+			    height: 20px;
+			    padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Logs2Timeline</h1>
+        <div id="chart_placeholder" style="width: 100%;"></div>
+
+		<script type="text/javascript" src='./libs/d3.min.js'></script>
+		<script type="text/javascript" src='./libs/eventDrops.js'></script>
+		<script type="text/javascript" src='./data.js'></script>
+		<script type="text/javascript">
+
+		var colors = d3.scale.category10();
+		var FONT_SIZE = 16; 
+		var TOOLTIP_WIDTH = 50; 
+
+		var showTooltip = function(data) {
+		    d3.select('body').selectAll('.tooltip').remove();
+
+		    const tooltip = d3.select('body')
+		        .append('div')
+		        .attr('class', 'tooltip')
+		        .style('opacity', 0); 
+
+		    tooltip.transition()
+		        .duration(200)
+		        .each('start', function start() {
+		            d3.select(this).style('block');
+		        })
+		        .style('opacity', 1);
+
+		    const rightOrLeftLimit = FONT_SIZE * TOOLTIP_WIDTH;
+		    const direction = d3.event.pageX > rightOrLeftLimit ? 'right' : 'left';
+
+		    const ARROW_MARGIN = 1.65;
+		    const ARROW_WIDTH = FONT_SIZE;
+		    const left = direction === 'right' ?
+		        d3.event.pageX - rightOrLeftLimit :
+		        d3.event.pageX - ARROW_MARGIN * FONT_SIZE - ARROW_WIDTH / 2;
+
+		    tooltip.html('<div class="placeholder"><div class="content">'+data.detail+'</div></div>')
+		        .classed(direction, true)
+		        .style({
+		            left: left+'px',
+		            top: (d3.event.pageY + 16) + 'px',
+		        });
+		};
+
+		var hideTooltip = function() {
+		   	d3.select('.tooltip').transition()
+		        .duration(200)
+		        .each('end', function end() {
+		            this.remove();
+		        })
+		        .style('opacity', 0);
+		};
+
+		var eventDropsChart = d3.chart
+			.eventDrops()
+			.eventLineColor((d, i) => colors(i))
+			.start(new Date(config.startdate).getTime())
+    		.end(new Date(config.stopdate).getTime())
+    		.date(d => new Date(d.date))
+    		.mouseover(showTooltip)
+    		.mouseout(hideTooltip);
+
+		d3.select('#chart_placeholder')
+		  .datum(config.events)
+		  .call(eventDropsChart);
+		</script>
+	</body>
+</html>
+
+
+

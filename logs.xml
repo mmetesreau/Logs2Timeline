@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Events><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:26:05.000000000Z'/><EventRecordID>450088</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get data : 2335214
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (26)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get data : 2335214
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (26)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:26:02.000000000Z'/><EventRecordID>450087</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get  data : 2335198
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (273)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get data : 2335198
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (273)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:26:00.000000000Z'/><EventRecordID>450086</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get data : 2335202
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (206)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get data : 2335202
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (206)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:26:00.000000000Z'/><EventRecordID>450085</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get data : 2335200
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (247)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get data : 2335200
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (247)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:25:59.000000000Z'/><EventRecordID>450084</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get data : 2335159
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (181)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get data : 2335159
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (181)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:25:59.000000000Z'/><EventRecordID>450083</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get data : 2335193
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (312)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get  data : 2335193
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (312)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:25:58.000000000Z'/><EventRecordID>450082</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get  data : 2335019
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (128)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get  data : 2335019
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (128)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event><Event xmlns='http://schemas.microsoft.com/win/2004/08/events/event'><System><Provider Name='WhateverManager.exe'/><EventID Qualifiers='0'>0</EventID><Level>2</Level><Task>0</Task><Keywords>0x80000000000000</Keywords><TimeCreated SystemTime='2016-11-29T21:25:58.000000000Z'/><EventRecordID>450081</EventRecordID><Channel>Channel</Channel><Computer>VM3101.BLABLA.COM</Computer><Security/></System><EventData><Data>Error when get  data : 2334872
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (61)
+</Data></EventData><RenderingInfo Culture='en-US'><Message>Error when get  data : 2334872
+
+-------- Exception ----------------
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+
+---------- Additional info ------------
+Logger name: A.B.C.Originworker
+AppDomain: 028be3c8b6da43edbbbad960148f30bf
+Thread:  (61)
+</Message><Level>Error</Level><Task></Task><Opcode>Info</Opcode><Channel></Channel><Provider></Provider><Keywords><Keyword>Classic</Keyword></Keywords></RenderingInfo></Event></Events>
