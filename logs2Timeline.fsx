@@ -40,7 +40,7 @@ type Events = {
 
 type Logs = XmlProvider<"logs.xml">
 
-let output = { Folder = "timeline"; JsFile = "data.js"; HtmlFile = "timeline.js" }
+let output = { Folder = "timeline"; JsFile = "data.js"; HtmlFile = "timeline.html" }
 
 let sanitizeDetail (detail : string) = 
     detail.Replace("\n", "<br>").Replace("'"," ")
