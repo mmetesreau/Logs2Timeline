@@ -1,6 +1,6 @@
 #Logs2Timeline: Data visualization for event logs
 
-FSX script file that display on a timeline the xml logs exported from windows event viewer.
+FSX script file that display on a timeline logs from windows event viewer.
 
 ##Technical Instructions
 
@@ -12,13 +12,18 @@ FSX script file that display on a timeline the xml logs exported from windows ev
 ```
 .\paket\paket.bootstrapper.exe
 .\paket\paket.exe restore
-fsi.exe .\logsToTimeline.fsx --file ..\exportedlogs.xml
+fsi.exe .\logsToTimeline.fsx --file ..\exportedlogs.evtx
 ```
+
+###Options
+
+* --file: specify evtx file path
+* --logname: specify local event log name
 
 ### Example
 
-![example](/screenshot.png "example")
+![example](/screenshot.gif "example")
 
 ##Thanks to
 
-[EventDrops](https://github.com/marmelab/EventDrops)
+[EventDrops](https://github.com/marmelab/EventDrops) a time based / event series interactive visualization using d3.js 

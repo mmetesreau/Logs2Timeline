@@ -82,6 +82,8 @@
 
 			.tooltip .content {
 			    flex: 1 0 0;
+			    max-height: 300px;
+			    overflow: auto;
 			}
 
 			.tooltip h3 {
@@ -142,67 +144,82 @@
 
 		<script type="text/javascript" src='./libs/d3.min.js'></script>
 		<script type="text/javascript" src='./libs/eventDrops.js'></script>
-		<script type="text/javascript" src='./data.js'></script>
 		<script type="text/javascript">
+			function run(config) {
 
-		var colors = d3.scale.category10();
-		var FONT_SIZE = 16; 
-		var TOOLTIP_WIDTH = 50; 
+				var colors = d3.scale.category10();
+				var FONT_SIZE = 16; 
+				var TOOLTIP_WIDTH = 50; 
 
-		var showTooltip = function(data) {
-		    d3.select('body').selectAll('.tooltip').remove();
+				var showTooltip = function(data) {
+				    d3.select('body').selectAll('.tooltip').remove();
 
-		    const tooltip = d3.select('body')
-		        .append('div')
-		        .attr('class', 'tooltip')
-		        .style('opacity', 0); 
+				    const tooltip = d3.select('body')
+				        .append('div')
+				        .attr('class', 'tooltip')
+				        .style('opacity', 0); 
 
-		    tooltip.transition()
-		        .duration(200)
-		        .each('start', function start() {
-		            d3.select(this).style('block');
-		        })
-		        .style('opacity', 1);
+				    tooltip.transition()
+				        .duration(200)
+				        .each('start', function start() {
+				            d3.select(this).style('block');
+				        })
+				        .style('opacity', 1);
 
-		    const rightOrLeftLimit = FONT_SIZE * TOOLTIP_WIDTH;
-		    const direction = d3.event.pageX > rightOrLeftLimit ? 'right' : 'left';
+				    const rightOrLeftLimit = FONT_SIZE * TOOLTIP_WIDTH;
+				    const direction = d3.event.pageX > rightOrLeftLimit ? 'right' : 'left';
 
-		    const ARROW_MARGIN = 1.65;
-		    const ARROW_WIDTH = FONT_SIZE;
-		    const left = direction === 'right' ?
-		        d3.event.pageX - rightOrLeftLimit :
-		        d3.event.pageX - ARROW_MARGIN * FONT_SIZE - ARROW_WIDTH / 2;
+				    const ARROW_MARGIN = 1.65;
+				    const ARROW_WIDTH = FONT_SIZE;
+				    const left = direction === 'right' ?
+				        d3.event.pageX - rightOrLeftLimit :
+				        d3.event.pageX - ARROW_MARGIN * FONT_SIZE - ARROW_WIDTH / 2;
 
-		    tooltip.html('<div class="placeholder"><div class="content">'+data.detail+'</div></div>')
-		        .classed(direction, true)
-		        .style({
-		            left: left+'px',
-		            top: (d3.event.pageY + 16) + 'px',
-		        });
-		};
+				    tooltip.html('<div class="placeholder"><div class="content">'+data.detail.join('<br/><hr/><br/>')+'</div></div>')
+				        .classed(direction, true)
+				        .style({
+				            left: left+'px',
+				            top: (d3.event.pageY + 20) + 'px',
+				        });
+				};
 
-		var hideTooltip = function() {
-		   	d3.select('.tooltip').transition()
-		        .duration(200)
-		        .each('end', function end() {
-		            this.remove();
-		        })
-		        .style('opacity', 0);
-		};
+				var hideTooltip = function() {
+				   	const tooltip = d3.select('.tooltip');
 
-		var eventDropsChart = d3.chart
-			.eventDrops()
-			.eventLineColor((d, i) => colors(i))
-			.start(new Date(config.startdate).getTime())
-    		.end(new Date(config.stopdate).getTime())
-    		.date(d => new Date(d.date))
-    		.mouseover(showTooltip)
-    		.mouseout(hideTooltip);
+					const removeTooltip = function () {
+						tooltip.transition()
+					        .duration(200)
+					        .each('end', function end() {
+					            this.remove();
+					        })
+					        .style('opacity', 0);
+					};
 
-		d3.select('#chart_placeholder')
-		  .datum(config.events)
-		  .call(eventDropsChart);
+				   	setTimeout(function() {
+				   		if (d3.select('.tooltip').filter(':hover')[0].length != 0) {
+				   			tooltip.on('mouseout', removeTooltip);
+				   		} else {
+							removeTooltip();
+				   		}
+					},150);
+				};
+
+				var eventDropsChart = d3.chart
+					.eventDrops()
+					.eventLineColor((d, i) => colors(i))
+					.start(new Date(config.startdate).getTime())
+					.end(new Date(config.stopdate).getTime())
+					.date(d => new Date(d.date))
+					.mouseover(showTooltip)
+					.mouseout(hideTooltip);
+
+				d3.select('#chart_placeholder')
+				  .datum(config.events)
+				  .call(eventDropsChart);
+			}
+
 		</script>
+		<script type="text/javascript" src="./app.js"></script>
 	</body>
 </html>
 
