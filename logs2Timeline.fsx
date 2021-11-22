@@ -1,5 +1,6 @@
-﻿#r "./packages/Newtonsoft.Json/lib/net40/Newtonsoft.Json.dll"
-#r "System.Xml.Linq.dll"
+﻿#r "nuget:System.Diagnostics.EventLog"
+#r "nuget:Newtonsoft.Json"
+#r "nuget:Fsharp.Data"
 
 open FSharp.Data
 open Newtonsoft.Json
@@ -84,7 +85,9 @@ let writeFile path content =
 
 let writeJavascriptFile = writeFile <| getOutputPath output.JsFile
 
-let openHtmlFile() = Process.Start(getOutputPath  output.HtmlFile) |> ignore
+let openHtmlFile() = 
+    let info = ProcessStartInfo(FileName = getOutputPath  output.HtmlFile, UseShellExecute = true)
+    Process.Start(info) |> ignore
 
 let processEntries entries =
     entries
@@ -149,6 +152,8 @@ let processLocalEventLog logName =
     | Some(entries)  -> processEntries entries
     | _ -> printfn "Invalid log name or no entries"
 
+
+processLocalEventLog "Application"
 
 match fsi.CommandLineArgs with
 | [| _ ; "--file" ; path|] -> 
