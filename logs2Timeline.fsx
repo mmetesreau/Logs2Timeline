@@ -17,26 +17,19 @@ type Output = {
 }
 
 type EventData = {
-    [<JsonProperty(PropertyName = "date")>]
-    Date: DateTime
-    [<JsonProperty(PropertyName = "detail")>]
-    Detail: string list
+    [<JsonProperty(PropertyName = "date")>] Date: DateTime
+    [<JsonProperty(PropertyName = "detail")>] Detail: string list
 }
 
 type Event = {
-    [<JsonProperty(PropertyName = "name")>]
-    Name: string;
-    [<JsonProperty(PropertyName = "data")>]
-    Data: EventData list 
+    [<JsonProperty(PropertyName = "name")>] Name: string;
+    [<JsonProperty(PropertyName = "data")>] Data: EventData list 
 }
 
 type Events = {
-    [<JsonProperty(PropertyName = "startdate")>]
-    Startdate: DateTime
-    [<JsonProperty(PropertyName = "stopdate")>]
-    Stopdate: DateTime
-    [<JsonProperty(PropertyName = "events")>]
-    Events: Event list
+    [<JsonProperty(PropertyName = "startdate")>] Startdate: DateTime
+    [<JsonProperty(PropertyName = "stopdate")>] Stopdate: DateTime
+    [<JsonProperty(PropertyName = "events")>] Events: Event list
 }
 
 type Entry = {
@@ -151,9 +144,6 @@ let processLocalEventLog logName =
     match loadLocalEventLogEntries logName with
     | Some(entries)  -> processEntries entries
     | _ -> printfn "Invalid log name or no entries"
-
-
-processLocalEventLog "Application"
 
 match fsi.CommandLineArgs with
 | [| _ ; "--file" ; path|] -> 
