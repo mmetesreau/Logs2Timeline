@@ -1,6 +1,6 @@
-﻿#r "nuget:System.Diagnostics.EventLog"
-#r "nuget:Newtonsoft.Json"
-#r "nuget:Fsharp.Data"
+﻿#r "nuget: System.Diagnostics.EventLog, 8.0.0"
+#r "nuget: Newtonsoft.Json, 13.0.3"
+#r "nuget: FSharp.Data, 6.3.0"
 
 open FSharp.Data
 open Newtonsoft.Json

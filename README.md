@@ -5,12 +5,12 @@ FSX script file that display on a timeline logs from windows event viewer.
 ## Technical Instructions
 
 ### Requirements
-- .NET 6 
+- .NET 8
 
 ### Run
 
 ```
-dotnet fsi logsToTimeline.fsx --file ..\exportedlogs.evtx
+dotnet fsi .\logs2Timeline.fsx --logname Application
 ```
 
 ### Options
